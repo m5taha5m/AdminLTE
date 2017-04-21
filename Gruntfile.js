@@ -6,8 +6,28 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       // If any .less file changes in directory "build/less/" run the "less"-task.
-      files: ["build/less/*.less", "build/less/skins/*.less", "dist/js/app.js"],
-      tasks: ["less", "uglify"]
+      files: ["build/less/*.less", "build/less/skins/*.less", "build/sass/*.scss", "dist/js/app.js"],
+      tasks: ["less", "sass", "uglify"]
+    },
+    // "sass"-task configuration
+    sass: {         // Task
+        development: {     // Target
+            options: {          // Target options
+                style: 'expanded'
+            },
+            files: {            // Dictionary of files
+                'dist/css/adminlte-rtl.css': 'build/sass/adminlte-rtl.scss',       // 'destination': 'source'
+                'dist/css/bootstrap-rtl.css': 'build/sass/bootstrap-rtl.scss',
+            }
+        },
+        production: {     // Target
+            options: {          // Target options
+                style: 'compressed'
+            },
+            files: {            // Dictionary of files
+                'dist/css/adminlte-rtl.css': 'build/sass/adminlte-rtl.scss',       // 'destination': 'source'
+            }
+        }
     },
     // "less"-task configuration
     // This task will compile all less files upon saving to create both AdminLTE.css and AdminLTE.min.css
@@ -159,6 +179,8 @@ module.exports = function (grunt) {
 
   // LESS Compiler
   grunt.loadNpmTasks('grunt-contrib-less');
+  // Sass Compiler
+  grunt.loadNpmTasks('grunt-contrib-sass');
   // Watch File Changes
   grunt.loadNpmTasks('grunt-contrib-watch');
   // Compress JS Files
