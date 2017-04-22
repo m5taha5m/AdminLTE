@@ -25,8 +25,8 @@
   "license": "MIT",
   "ignore": [
     "*",
-    "!dist/*",
-    "!plugins/*"
+    "!dist/**",
+    "!plugins/**"
   ],
   "dependencies": {
     "bootstrap-rtl": "^3.4.0",
