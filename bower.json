@@ -24,13 +24,11 @@
   ],
   "license": "MIT",
   "ignore": [
-    "/.*",
-    "node_modules",
-    "bower_components",
-    "composer.json",
-    "documentation"
+    "*",
+    "!dist/*",
+    "!plugins/*"
   ],
-  "devDependencies": {
+  "dependencies": {
     "bootstrap-rtl": "^3.4.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1"
