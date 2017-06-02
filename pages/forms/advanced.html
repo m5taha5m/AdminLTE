@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap datepicker -->
   <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
+  <!-- persian datepicker -->
+  <link rel="stylesheet" href="../../plugins/persian-datepicker/dist/css/persian-datepicker.min.css"/>
   <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="../../plugins/iCheck/all.css">
   <!-- Bootstrap Color Picker -->
@@ -757,6 +759,20 @@
               </div>
               <!-- /.form group -->
 
+              <!-- Persian Date -->
+              <div class="form-group">
+                <label>Persian Date:</label>
+
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="pdatepicker">
+                </div>
+                <!-- /.input group -->
+              </div>
+              <!-- /.form group -->
+
               <!-- Date range -->
               <div class="form-group">
                 <label>Date range:</label>
@@ -1127,14 +1143,17 @@
 <!-- Select2 -->
 <script src="../../plugins/select2/select2.full.min.js"></script>
 <!-- InputMask -->
-<script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="../../plugins/inputmask/dist/jquery.inputmask.bundle.js"></script>
+<script src="../../plugins/inputmask/dist/inputmask/inputmask.date.extensions.js"></script>
+<script src="../../plugins/inputmask/dist/inputmask/inputmask.extensions.js"></script>
 <!-- date-range-picker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap datepicker -->
 <script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- persian datepicker -->
+<script src="../../plugins/persian-datepicker/dist/js/persian-datepicker.min.js"></script>
+<script src="../../plugins/persian-date/dist/persian-date.min.js"></script>
 <!-- bootstrap color picker -->
 <script src="../../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
 <!-- bootstrap time picker -->
@@ -1161,6 +1180,9 @@
     $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
     //Money Euro
     $("[data-mask]").inputmask();
+
+    //Persian Datepicker
+    $("#pdatepicker").pDatepicker();
 
     //Date range picker
     $('#reservation').daterangepicker();
