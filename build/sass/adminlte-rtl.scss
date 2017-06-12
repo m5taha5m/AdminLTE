@@ -268,12 +268,17 @@ body{
 }
 
 /* General customizations */
-.box-header>.box-tools{
+.box-header>.box-tools {
     right: auto;
     left: 10px;
 }
-.pagination{
+.pagination {
     padding-right: 0;
+}
+.callout {
+    padding: 15px 15px 15px 30px;
+    border-left: none;
+    border-right: 5px solid #eee;
 }
 
 /* Global customizations */
